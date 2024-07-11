@@ -1,9 +1,6 @@
-from PIL import Image
-import pytesseract
 from pynput import keyboard as kb
 import interaz
 import pyautogui
-import time
 from ocr import ocr
 # bxs = pytesseract.image_to_boxes("demo.png")
 
@@ -12,11 +9,11 @@ from ocr import ocr
 
 
 def run():
-    time.sleep(2)
+    # time.sleep(2)
     image = pyautogui.screenshot()
     image.save("scr.png")
-    ocr("scr.png")
     interaz.show("scr.png")
+
 
 
 def pulsa(tecla):
